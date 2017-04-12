@@ -1,0 +1,20 @@
+{
+    "name": "axovel/coding-rules",
+    "description": "Axovel Software Pvt Ltd general code styling rules for different tools",
+    "homepage": "https://github.com/axovel/coding-rules",
+    "require": {
+        "squizlabs/php_codesniffer": "~2",
+        "phpmd/phpmd" : "@stable"
+    },
+    "keywords": [
+        "Axovel-Software",
+        "php code style",
+        "code standards",
+        "phpcs",
+        "clean php code"
+    ],
+    "license": "Apache-2.0",
+    "config": {
+        "preferred-install" : "dist"
+    }
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Axovel's custom PHPMD ruleset for Laravel projects">
+  <description>
+      Axovel Softwre Pvt Ltd custom PHPMD ruleset
+      Inspired by https://gist.github.com/slayerfat/2b3cc4faf94d2863b505
+  </description>
+
+  <!-- https://phpmd.org/rules/cleancode.html -->
+  <rule ref="rulesets/cleancode.xml">
+    <exclude name="StaticAccess"/>
+  </rule>
+
+  <!-- https://phpmd.org/rules/codesize.html -->
+  <rule ref="rulesets/codesize.xml"/>
+
+  <!-- https://phpmd.org/rules/controversial.html -->
+  <rule ref="rulesets/controversial.xml">
+      <exclude name="CamelCasePropertyName"/>
+  </rule>
+
+  <!-- https://phpmd.org/rules/controversial.html -->
+  <rule ref="rulesets/design.xml">
+      <exclude name="CouplingBetweenObjects"/>
+  </rule>
+
+  <!-- https://phpmd.org/rules/naming.html -->
+  <rule ref="rulesets/naming.xml">
+      <exclude name="LongVariable"/>
+      <exclude name="ShortVariable"/>
+  </rule>
+  <rule ref="rulesets/naming.xml/ShortVariable"
+        since="0.2"
+        message="Avoid variables with short names like {0}. Configured minimum length is {1}."
+        class="PHPMD\Rule\Naming\ShortVariable"
+        externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable">
+      <priority>3</priority>
+      <properties>
+          <property name="minimum" description="Minimum length for a variable, property or parameter name" value="3"/>
+          <property name="exceptions" value="id" />
+      </properties>
+  </rule>
+
+  <!-- https://phpmd.org/rules/unusedcode.html -->
+  <rule ref="rulesets/unusedcode.xml"/>
+
+</ruleset>
